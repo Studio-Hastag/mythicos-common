@@ -31,6 +31,7 @@ class PkgInfo:
         "remote_url",
         "display_name",
         "summary",
+        "raw_description",
         "description",
         "version",
         "icon",
@@ -64,6 +65,7 @@ class PkgInfo:
         self.display_name = None
         self.summary = None
         self.description = None
+        self.raw_description = None
         self.developer = None
         self.version = None
         self.icon = {}
@@ -154,27 +156,26 @@ class AptPkgInfo(PkgInfo):
 
         return self.summary
 
-    def get_description(self, apt_pkg=None):
+    def get_description(self, apt_pkg=None, for_search=False):
         # fastest
-        if self.description:
-            return self.description
+        if for_search and self.raw_description:
+            return self.raw_description
+        elif not for_search:
+            if self.description:
+                return self.description
+            elif self.raw_description:
+                self.description = xml_markup_convert_to_text(self.raw_description)
+                return self.description
 
-        if apt_pkg and apt_pkg.candidate:
-            candidate = apt_pkg.candidate
-
-            description = ""
-            if candidate.description is not None:
-                description = candidate.description
-                description = description.replace("<p>", "").replace("</p>", "\n")
-                for tags in ["<ul>", "</ul>", "<li>", "</li>"]:
-                    description = description.replace(tags, "")
-
-                self.description = capitalize(description)
-
-        if self.description is None:
+        if apt_pkg and apt_pkg.candidate and apt_pkg.candidate.description is not None:
+            self.raw_description = apt_pkg.candidate.description
+            if not for_search:
+                self.description = xml_markup_convert_to_text(description)
+        else:
             self.description = ""
+            self.raw_description = ""
 
-        return self.description
+        return self.raw_description if for_search else self.description
 
     def get_keywords(self):
         return ""
@@ -337,19 +338,25 @@ class FlatpakPkgInfo(PkgInfo):
     def get_summary(self):
         return self.summary
 
-    def get_description(self, as_pkg=None):
-        if self.description:
-            return self.description
+    def get_description(self, as_pkg=None, for_search=False):
+        if for_search and self.raw_description:
+            return self.raw_description
+        elif not for_search:
+            if self.description:
+                return self.description
+            elif self.raw_description:
+                self.description = xml_markup_convert_to_text(self.raw_description)
+                return self.description
 
-        if as_pkg:
-            description = as_pkg.get_description()
-            if description is not None:
+        if as_pkg and ((description := as_pkg.get_description()) is not None):
+            self.raw_description = description
+            if not for_search:
                 self.description = xml_markup_convert_to_text(description)
+        else:
+            self.description = ""
+            self.raw_description = ""
 
-        if self.description is None:
-            return ""
-
-        return self.description
+        return self.raw_description if for_search else self.description
 
     def get_keywords(self):
         return self.keywords

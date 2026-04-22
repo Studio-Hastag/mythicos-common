@@ -514,14 +514,20 @@ class Installer(GObject.Object):
         self.emit("appstream-changed")
 
     def get_appstream_pkg_for_pkginfo(self, pkginfo):
+        try:
+            return self.backend_table[pkginfo]
+        except KeyError:
+            pass
+
         backend_component = None
 
         if pkginfo.pkg_hash.startswith("a"):
             backend_component = _apt.search_for_pkginfo_apt_pkg(pkginfo)
-            if backend_component is not None:
-                self.backend_table[pkginfo] = backend_component
         else:
             backend_component = _flatpak.search_for_pkginfo_appstream_package(pkginfo)
+
+        if backend_component is not None:
+            self.backend_table[pkginfo] = backend_component
 
         return backend_component
 
@@ -564,8 +570,8 @@ class Installer(GObject.Object):
 
     def get_description(self, pkginfo, for_search=False):
         """
-        Returns the description of the package.  If for_search is True,
-        this is the raw, unformatted string in the case of apt.
+        Returns the description of the package. If for_search is True,
+        html conversion is skipped and the raw description used.
         """
         if for_search and pkginfo.pkg_hash.startswith("a"):
             try:
@@ -574,7 +580,7 @@ class Installer(GObject.Object):
                 pass
 
         as_pkg = self.get_appstream_pkg_for_pkginfo(pkginfo)
-        return pkginfo.get_description(as_pkg)
+        return pkginfo.get_description(as_pkg, for_search)
 
     def get_screenshots(self, pkginfo):
         """

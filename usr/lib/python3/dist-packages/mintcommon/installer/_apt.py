@@ -29,7 +29,6 @@ def capitalize(string):
 
 _apt_cache = None
 _apt_cache_lock = threading.Lock()
-_as_pool = None
 
 def get_apt_cache(full=False):
     global _apt_cache
