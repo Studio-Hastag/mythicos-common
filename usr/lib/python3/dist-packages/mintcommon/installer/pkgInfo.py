@@ -170,7 +170,7 @@ class AptPkgInfo(PkgInfo):
         if apt_pkg and apt_pkg.candidate and apt_pkg.candidate.description is not None:
             self.raw_description = apt_pkg.candidate.description
             if not for_search:
-                self.description = xml_markup_convert_to_text(description)
+                self.description = xml_markup_convert_to_text(self.raw_description)
         else:
             self.description = ""
             self.raw_description = ""
@@ -351,7 +351,7 @@ class FlatpakPkgInfo(PkgInfo):
         if as_pkg and ((description := as_pkg.get_description()) is not None):
             self.raw_description = description
             if not for_search:
-                self.description = xml_markup_convert_to_text(description)
+                self.description = xml_markup_convert_to_text(self.raw_description)
         else:
             self.description = ""
             self.raw_description = ""
