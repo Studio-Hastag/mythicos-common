@@ -449,18 +449,6 @@ def _addon_is_compatible(parent, addon):
         if len(versions) > 0:
             return addon.branch in versions
 
-        # See if the extension specifies a runtime, and if it matches the app's.
-        # This may end up filtering out some valid addons if no extension versioning
-        # is used, but...
-        try:
-            child_runtime = child_meta.get_string("ExtensionOf", "runtime")
-            parent_runtime = parent_meta.get_string("Application", "runtime")
-
-            if child_runtime != parent_runtime:
-                return False
-        except GLib.Error as e:
-            pass
-
     # All else fails, let it thru anyhow. Who knows? Do you??
     return True
 
