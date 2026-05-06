@@ -374,23 +374,48 @@ def _get_related_refs_for_removal(parent_pkginfo):
 def _get_addons_for_pkginfo(parent_pkginfo):
     global pools
 
-    matched_addons = []
+    # appstream lists multi-branch extension-point addons (e.g.
+    # org.freedesktop.LinuxAudio.Plugins.X for branches 22.08..25.08)
+    # as separate entries. After the compat check picks the branch the
+    # parent's slot wants, dedupe so a single pkginfo per addon id
+    # surfaces.
+    matched_by_name = {}
     try:
         aspool = pools[parent_pkginfo.remote]
         as_pkg = aspool.lookup_appstream_package(parent_pkginfo)
 
         if as_pkg is not None:
-            addons = as_pkg.get_addons()
+            addons = as_pkg.get_addons(
+                extension_prefixes=_extension_prefixes_for_pkginfo(parent_pkginfo)
+            )
 
             for addon in addons:
                 info = create_pkginfo_from_as_pkg(addon, parent_pkginfo.remote, parent_pkginfo.remote_url)
-                if info:
-                    if _addon_is_compatible(parent_pkginfo, info):
-                        matched_addons.append(info)
+                if info and _addon_is_compatible(parent_pkginfo, info):
+                    matched_by_name[info.name] = info
     except Exception as e:
         warn("Could not get a list of addons: %s" % str(e))
 
-    return matched_addons
+    return list(matched_by_name.values())
+
+def _extension_prefixes_for_pkginfo(parent_pkginfo):
+    # Read the parent app's flatpak metadata for declared extension points
+    # (e.g. "Extension org.freedesktop.LinuxAudio.Plugins"). Generic addons
+    # like VST plugins fit these slots without naming the parent in their
+    # own metadata.
+    try:
+        parent_meta = _get_metadata(parent_pkginfo.remote, Flatpak.Ref.parse(parent_pkginfo.refid))
+    except Exception as e:
+        warn("Could not read parent metadata for extension points: %s" % str(e))
+        return []
+
+    prefixes = []
+    groups, _l = parent_meta.get_groups()
+    for group in groups:
+        if not group.startswith("Extension "):
+            continue
+        prefixes.append(group[len("Extension "):])
+    return prefixes
 
 def _get_metadata(remote_name, ref):
     try:
@@ -407,7 +432,6 @@ def _get_metadata(remote_name, ref):
     return keyfile
 
 def _addon_is_compatible(parent, addon):
-    # Get the extension point name
     parent_meta = _get_metadata(parent.remote, Flatpak.Ref.parse(parent.refid))
     child_meta = _get_metadata(addon.remote, Flatpak.Ref.parse(addon.refid))
 
@@ -419,38 +443,39 @@ def _addon_is_compatible(parent, addon):
     # the extension group.
     addon_prefix = addon.name.rpartition(".")[0]
     ext_point = f"Extension {addon_prefix}"
+    full_ext_point = f"Extension {addon.name}"
 
-    # Addons should always have a 'ref' field, at minimum, to match them with their app.
-    try:
-        eo_ref = child_meta.get_string("ExtensionOf", "ref")
-        if eo_ref != parent.refid:
-            return False
-    except:
-        pass
-
-    groups, l = parent_meta.get_groups()
-
+    # If the parent declares a slot matching this addon's id (by prefix
+    # or by full name), trust that declaration. Generic extension-point
+    # addons (e.g. LinuxAudio VST plugins) name an unrelated host in their
+    # own ExtensionOf/ref but are still loaded by any app declaring the
+    # slot, so the slot match must take precedence.
+    groups, _l = parent_meta.get_groups()
     for group in groups:
-        # skip irrelevant groups
-        if not group.startswith("Extension "):
-            continue
-        if group not in (ext_point, f"Extension {addon.name}"):
+        if group not in (ext_point, full_ext_point):
             continue
 
-        # Look for a version field, see if it matches the addon's branch
         versions = []
         try:
             versions = parent_meta.get_string_list(group, "versions")
-        except GLib.Error as e:
+        except GLib.Error:
             try:
                 versions = [parent_meta.get_string(group, "version")]
-            except:
+            except GLib.Error:
                 pass
-        if len(versions) > 0:
-            return addon.branch in versions
 
-    # All else fails, let it thru anyhow. Who knows? Do you??
-    return True
+        if versions:
+            return addon.branch in versions
+        return True
+
+    # No matching slot. Fall back to the addon's own declaration:
+    # if it explicitly names this parent, accept; if it names a
+    # different parent, reject; if absent, let it through.
+    try:
+        eo_ref = child_meta.get_string("ExtensionOf", "ref")
+        return eo_ref == parent.refid
+    except GLib.Error:
+        return True
 
 def select_packages(task):
     task.transaction = FlatpakTransaction(task)

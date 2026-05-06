@@ -290,23 +290,38 @@ class Package():
 
         return ret
 
-    def get_addons(self):
+    def get_addons(self, extension_prefixes=None):
         root_node = self.query_for_node(self.xbnode, "..")
         addon_nodes = []
 
         try:
-            addon_nodes = root_node.query(
+            addon_nodes = list(root_node.query(
                 f"component[@type='addon']/extends[starts-with(text(),'{self.name}')]/..", 0
-            )
+            ))
         except GLib.Error as e:
             debug_query(f"Could not query for addons or there are none: {self.name} - {e.message}")
-            return []
+
+        # Generic extension-point addons (e.g. VST plugins under
+        # org.freedesktop.LinuxAudio.Plugins) won't carry an <extends>
+        # tag for this app, but their id matches a prefix that the
+        # parent's flatpak metadata declares as an [Extension ...] slot.
+        # The addon's id may be the prefix itself (single extension at
+        # the slot, e.g. com.github.rafostar.Clapper.Enhancers) or
+        # prefix + '.<name>' (multiple extensions). appstream typically
+        # lists one entry per branch for these; the caller picks the
+        # branch matching the slot's version.
+        for prefix in extension_prefixes or []:
+            for xpath in (f"component[@type='addon']/id[text()='{prefix}']/..",
+                          f"component[@type='addon']/id[starts-with(text(),'{prefix}.')]/.."):
+                try:
+                    addon_nodes.extend(root_node.query(xpath, 0))
+                except GLib.Error as e:
+                    debug_query(f"No addons for extension prefix {prefix}: {e.message}")
 
         addons = []
         for addon_node in addon_nodes:
             name = self.query_string(addon_node, "id")
-            addon_pkg = Package(name, self.remote, addon_node)
-            addons.append(addon_pkg)
+            addons.append(Package(name, self.remote, addon_node))
 
         return addons
 
