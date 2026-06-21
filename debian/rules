@@ -3,3 +3,13 @@
 %:
 	dh ${@}
 
+override_dh_install:
+	mkdir -p debian/mythicos-common/usr/share/mythicos/locale
+	for po in po/*.po; do \
+		if [ -f "$$po" ]; then \
+			lang=$$(basename "$$po" .po); \
+			mkdir -p debian/mythicos-common/usr/share/mythicos/locale/$$lang/LC_MESSAGES; \
+			msgfmt "$$po" -o debian/mythicos-common/usr/share/mythicos/locale/$$lang/LC_MESSAGES/mythicos-common.mo; \
+		fi; \
+	done
+	dh_install
