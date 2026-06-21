@@ -1,5 +1,5 @@
 #!/bin/bash
 
-xgettext --language=Python --keyword=_ --output=mint-common.pot usr/bin/* usr/lib/python3/dist-packages/mintcommon/*.py usr/lib/python3/dist-packages/mintcommon/installer/*.py usr/lib/linuxmint/common/*
+mkdir -p po
 
-
+xgettext --language=Python --keyword=_ --output=po/mythicos-common.pot usr/bin/* usr/lib/python3/dist-packages/mythiccommon/*.py usr/lib/python3/dist-packages/mythiccommon/installer/*.py usr/lib/mythicos/common/*
