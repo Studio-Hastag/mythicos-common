@@ -1,11 +1,11 @@
-Source: mint-common
+Source: mythicos-common
 Section: admin
 Priority: optional
-Maintainer: Clement Lefebvre <root@linuxmint.com>
-Build-Depends: debhelper-compat (= 12)
+Maintainer: Studio Hastag <contact@hastag.fr>
+Build-Depends: debhelper-compat (= 12), gettext
 Standards-Version: 3.9.5
 
-Package: mint-common
+Package: mythicos-common
 Architecture: all
 Depends: python3,
          aptkit,
@@ -14,8 +14,8 @@ Depends: python3,
          gir1.2-gtk-3.0,
          gir1.2-xapp-1.0,
          gir1.2-xmlb-2.0,
-         mint-translations,
          libgtk3-perl
          ${misc:Depends},
-Description: Common scripts and resources for Linux Mint
- A collection of scripts and resources used by other Linux Mint packages
+Description: Common scripts and resources for MythicOS
+ A collection of scripts and resources used by other MythicOS packages,
+ forked from Linux Mint's mint-common.
