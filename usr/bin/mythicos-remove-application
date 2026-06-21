@@ -12,9 +12,9 @@ from gi.repository import Gtk
 import aptkit.simpleclient
 
 # i18n
-gettext.install("mint-common", "/usr/share/linuxmint/locale")
+gettext.install("mythicos-common", "/usr/share/mythicos/locale")
 
-class MintRemoveWindow:
+class MythicRemoveWindow:
 
     def __init__(self, desktopFile):
 
@@ -40,7 +40,7 @@ class MintRemoveWindow:
                         os.remove(self.desktopFile)
                     except OSError as error:
                         print("Could not remove desktop file in user mode.")
-                        subprocess.call(["pkexec", "/usr/lib/linuxmint/common/mint-remove-application.py", self.desktopFile])
+                        subprocess.call(["pkexec", "/usr/lib/mythicos/common/mint-remove-application.py", self.desktopFile])
                 warnDlg.destroy()
             sys.exit(0)
 
@@ -51,7 +51,7 @@ class MintRemoveWindow:
         for line in rdependenciesLines:
                 rdependencies.append(line.split()[1])
 
-        dontRemoves = ["cinnamon", "mint-meta-cinnamon", "mint-meta-core", "mint-meta-mate", "mint-meta-xfce"]
+        dontRemoves = ["mythicos-desktop", "mythicos-core-verrou"]
         if any(packageName in dontRemoves for packageName in rdependencies):
             self.no_remove_dialog(package, rdependencies)
         else:
@@ -194,5 +194,5 @@ if __name__ == "__main__":
             print("Path not found", path)
             sys.exit(1)
 
-    mainwin = MintRemoveWindow(path)
+    mainwin = MythicRemoveWindow(path)
     Gtk.main()
