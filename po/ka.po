@@ -1,11 +1,11 @@
-# Georgian translation for linuxmint
+# Translation for mythicos
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the linuxmint package.
+# This file is distributed under the same license as the mythicos package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: linuxmint\n"
+"Project-Id-Version: mythicos\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2024-11-26 10:25+0000\n"
 "PO-Revision-Date: 2025-06-15 10:46+0000\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
 "Language: ka\n"
 
-#: usr/bin/cinnamon-remove-application:33 usr/bin/mint-remove-application:33
+#: usr/bin/cinnade-remove-application:33 usr/bin/mythicos-remove-application:33
 msgid ""
 "This menu item is not associated to any package. Do you want to remove it "
 "from the menu anyway?"
@@ -26,127 +26,127 @@ msgstr ""
 "მენიუს აღნიშნული პუქნტი არ არის დაკავშირებული არცერთ პაკეტთან. მაინც გსურთ "
 "მისი მენიუდან ამოღება?"
 
-#: usr/bin/cinnamon-remove-application:78 usr/bin/mint-remove-application:78
+#: usr/bin/cinnade-remove-application:78 usr/bin/mythicos-remove-application:78
 msgid "The following packages will be removed:"
 msgstr "წაიშლება შემდეგი პაკეტები:"
 
-#: usr/bin/cinnamon-remove-application:85 usr/bin/mint-remove-application:85
+#: usr/bin/cinnade-remove-application:85 usr/bin/mythicos-remove-application:85
 msgid "Packages to be removed"
 msgstr "პაკეტები რომლებიც უნდა წაიშალოს"
 
-#: usr/bin/cinnamon-remove-application:146 usr/bin/mint-remove-application:146
+#: usr/bin/cinnade-remove-application:146 usr/bin/mythicos-remove-application:146
 #, python-format
 msgid "Cannot remove package %s as it is required by a system package."
 msgstr "ვერ წავშლი პაკეტს %s, რადგან ის სისტემურ პაკეტს სჭირდება."
 
-#: usr/bin/cinnamon-remove-application:152 usr/bin/mint-remove-application:152
+#: usr/bin/cinnade-remove-application:152 usr/bin/mythicos-remove-application:152
 #, python-format
 msgid "Package %s is a dependency of the following packages:"
 msgstr "პაკეტი %s დამოკიდებულებაა შემდეგი პაკეტებისთვის:"
 
-#: usr/bin/mint-remove-flatpak:59
+#: usr/bin/mythicos-remove-flatpak:59
 msgid "Removing"
 msgstr "წაიშლება"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:39
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:110
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:39
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:110
 msgid "Install"
 msgstr "დაყენება"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:40
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:40
 msgid "Reinstall"
 msgstr "თავიდან დაყენება"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:41
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:120
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:41
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:120
 msgid "Remove"
 msgstr "წაშლა"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:42
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:42
 msgid "Purge"
 msgstr "გაწმენდა"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:43
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:140
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:43
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:140
 msgid "Upgrade"
 msgstr "განახლება"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:44
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:44
 msgid "Downgrade"
 msgstr "ვერსიის ჩამოწევა"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:45
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:45
 msgid "Skip upgrade"
 msgstr "განახლების გამოტოვება"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:61
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:145
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:61
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:145
 msgid "Please take a look at the list of changes below."
 msgstr "გთხოვთ, გადახედოთ ქვემოთ მოცემულ ცვლილებებს."
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:68
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:155
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:68
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:155
 msgid "Additional software will be installed"
 msgstr "დაყენებული იქნება დამატებითი პროგრამები"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:70
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:70
 msgid "Additional software will be re-installed"
 msgstr "დამატებით პროგრამები თავიდან დადგება"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:72
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:157
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:72
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:157
 msgid "Additional software will be removed"
 msgstr "წაიშლება დამატებითი პროგრამები"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:74
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:74
 msgid "Additional software will be purged"
 msgstr "დამატებითი პროგრამები გაიწმინდება"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:76
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:159
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:76
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:159
 msgid "Additional software will be upgraded"
 msgstr "დამატებითი პროგრამები განახლდება"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:78
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:78
 msgid "Additional software will be downgraded"
 msgstr "დამატებითი პროგრამის ვერსია ჩამოიწევა"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:80
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:80
 msgid "Updates will be skipped"
 msgstr "გამოტოვებული განახლებები"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:88
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:168
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:88
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:168
 msgid "Additional changes are required"
 msgstr "საჭიროა დამატებითი ცვლილებები"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:93
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:174
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:93
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:174
 #, python-format
 msgid "%s will be downloaded in total."
 msgstr "სულ გადმოწერილი იქნება %s."
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:97
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:178
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:97
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:178
 #, python-format
 msgid "%s of disk space will be freed."
 msgstr "%s ადგილი იქნება განთავისუფლებული დისკზე."
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:101
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:182
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:101
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:182
 #, python-format
 msgid "%s more disk space will be used."
 msgstr "დისკზე დაკავებული ადგილი: %s."
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:106
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:106
 msgid "Flatpaks"
 msgstr "Flatpak-ები"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:251
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:251
 msgid "Flatpak"
 msgstr "Flatpak"
 
-#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:324
+#: usr/lib/python3/dist-packages/mythiccommon/installer/dialogs.py:324
 msgid "An error occurred"
 msgstr "შეცდომა"
 
