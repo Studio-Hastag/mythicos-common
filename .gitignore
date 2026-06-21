@@ -1,4 +1,4 @@
-debian/mint-common
+debian/mythicos-common
 debian/*.substvars
 debian/debhelper-build-stamp
 debian/.debhelper
