@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo rm -rf /usr/lib/linuxmint/common
-sudo rm -rf /usr/lib/python3/dist-packages/mintcommon
+sudo rm -rf /usr/lib/mythicos/common
+sudo rm -rf /usr/lib/python3/dist-packages/mythiccommon
 sudo cp -R usr /
 sudo cp -R etc /
