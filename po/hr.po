@@ -1,0 +1,153 @@
+# Croatian translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-11-26 10:25+0000\n"
+"PO-Revision-Date: 2025-09-28 12:28+0000\n"
+"Last-Translator: Niko Košćina <nikokoscina@icloud.com>\n"
+"Language-Team: Croatian <hr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2026-01-08 15:34+0000\n"
+"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
+
+#: usr/bin/cinnamon-remove-application:33 usr/bin/mint-remove-application:33
+msgid ""
+"This menu item is not associated to any package. Do you want to remove it "
+"from the menu anyway?"
+msgstr ""
+"Ova stavka izbornika nije pridružena nijednom paketu. Želite li ju ipak "
+"ukloniti iz izbornika?"
+
+#: usr/bin/cinnamon-remove-application:78 usr/bin/mint-remove-application:78
+msgid "The following packages will be removed:"
+msgstr "Sljedeći paketi će biti uklonjeni:"
+
+#: usr/bin/cinnamon-remove-application:85 usr/bin/mint-remove-application:85
+msgid "Packages to be removed"
+msgstr "Paketi za uklanjanje"
+
+#: usr/bin/cinnamon-remove-application:146 usr/bin/mint-remove-application:146
+#, python-format
+msgid "Cannot remove package %s as it is required by a system package."
+msgstr "Nije moguće ukloniti paket %s jer ga zahtijeva sistemski paket."
+
+#: usr/bin/cinnamon-remove-application:152 usr/bin/mint-remove-application:152
+#, python-format
+msgid "Package %s is a dependency of the following packages:"
+msgstr "Paket %s je zavisnost sljedećih paketa:"
+
+#: usr/bin/mint-remove-flatpak:59
+msgid "Removing"
+msgstr "Uklanjanje"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:39
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:110
+msgid "Install"
+msgstr "Instaliraj"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:40
+msgid "Reinstall"
+msgstr "Ponovno instaliraj"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:41
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:120
+msgid "Remove"
+msgstr "Ukloni"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:42
+msgid "Purge"
+msgstr "Potpuno ukloni"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:43
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:140
+msgid "Upgrade"
+msgstr "Nadogradi"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:44
+msgid "Downgrade"
+msgstr "Vrati prijašnju inačicu"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:45
+msgid "Skip upgrade"
+msgstr "Preskoči nadogradnju"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:61
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:145
+msgid "Please take a look at the list of changes below."
+msgstr "Pogledajte zapis promjena ispod."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:68
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:155
+msgid "Additional software will be installed"
+msgstr "Dodatni softver biti će instaliran"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:70
+msgid "Additional software will be re-installed"
+msgstr "Dodatni softver biti će ponovno instaliran"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:72
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:157
+msgid "Additional software will be removed"
+msgstr "Dodatni softver biti će uklonjen"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:74
+msgid "Additional software will be purged"
+msgstr "Dodatni softver biti će potpuno uklonjen"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:76
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:159
+msgid "Additional software will be upgraded"
+msgstr "Dodatni softver biti će nadograđen"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:78
+msgid "Additional software will be downgraded"
+msgstr "Dodatni softver biti će vraćen na prijašnju inačicu"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:80
+msgid "Updates will be skipped"
+msgstr "Nadopuna će biti preskočena"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:88
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:168
+msgid "Additional changes are required"
+msgstr "Dodatne promjene su potrebne"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:93
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:174
+#, python-format
+msgid "%s will be downloaded in total."
+msgstr "%s biti će ukupno preuzeto."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:97
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:178
+#, python-format
+msgid "%s of disk space will be freed."
+msgstr "%s diskovnog prostora će biti oslobođeno."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:101
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:182
+#, python-format
+msgid "%s more disk space will be used."
+msgstr "%s više diskovnog prostora će biti zauzeto."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:106
+msgid "Flatpaks"
+msgstr "Flatpak paketi"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:251
+msgid "Flatpak"
+msgstr "Flatpak"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:324
+msgid "An error occurred"
+msgstr "Greška se dogodila"
+
+#~ msgid "Please enter your password"
+#~ msgstr "Upišite svoju lozinku"

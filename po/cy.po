@@ -1,0 +1,153 @@
+# Welsh translation for linuxmint
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-11-26 10:25+0000\n"
+"PO-Revision-Date: 2024-12-03 13:59+0000\n"
+"Last-Translator: Rhoslyn Prys <rprys@posteo.net>\n"
+"Language-Team: Welsh <cy@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2026-01-08 15:34+0000\n"
+"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
+
+#: usr/bin/cinnamon-remove-application:33 usr/bin/mint-remove-application:33
+msgid ""
+"This menu item is not associated to any package. Do you want to remove it "
+"from the menu anyway?"
+msgstr ""
+"Nid yw'r eitem dewislen yma wedi ei gysylltu ag unrhyw becyn. Hoffech chi ei "
+"dynnu o'r ddewislen beth bynnag?"
+
+#: usr/bin/cinnamon-remove-application:78 usr/bin/mint-remove-application:78
+msgid "The following packages will be removed:"
+msgstr "Bydd y pecynnau canlynol yn cael eu tynnu:"
+
+#: usr/bin/cinnamon-remove-application:85 usr/bin/mint-remove-application:85
+msgid "Packages to be removed"
+msgstr "Pecynnau i'w tynnu"
+
+#: usr/bin/cinnamon-remove-application:146 usr/bin/mint-remove-application:146
+#, python-format
+msgid "Cannot remove package %s as it is required by a system package."
+msgstr "Methu tynnu pecyn %s gan fod ei angen ar becyn system."
+
+#: usr/bin/cinnamon-remove-application:152 usr/bin/mint-remove-application:152
+#, python-format
+msgid "Package %s is a dependency of the following packages:"
+msgstr "Mae'r pecynnau canlynol yn dibynnu ar becyn %s :"
+
+#: usr/bin/mint-remove-flatpak:59
+msgid "Removing"
+msgstr "Wrthi'n tynnu"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:39
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:110
+msgid "Install"
+msgstr "Gosod"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:40
+msgid "Reinstall"
+msgstr "Ailosod"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:41
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:120
+msgid "Remove"
+msgstr "Tynnu"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:42
+msgid "Purge"
+msgstr "Tynnu"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:43
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:140
+msgid "Upgrade"
+msgstr "Diweddaru"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:44
+msgid "Downgrade"
+msgstr "Israddio"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:45
+msgid "Skip upgrade"
+msgstr "Hepgor y diweddaru"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:61
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:145
+msgid "Please take a look at the list of changes below."
+msgstr "Edrychwch ar y rhestr newidiadau isod"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:68
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:155
+msgid "Additional software will be installed"
+msgstr "Bydd meddalwedd ychwanegol yn cael ei osod"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:70
+msgid "Additional software will be re-installed"
+msgstr "Bydd meddalwedd ychwanegol yn cael ei ail osod"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:72
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:157
+msgid "Additional software will be removed"
+msgstr "Bydd meddalwedd ychwanegol yn cael ei dynnu"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:74
+msgid "Additional software will be purged"
+msgstr "Bydd meddalwedd ychwanegol yn cael ei ddileu"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:76
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:159
+msgid "Additional software will be upgraded"
+msgstr "Bydd meddalwedd ychwanegol yn cael ei ddiweddaru"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:78
+msgid "Additional software will be downgraded"
+msgstr "Bydd meddalwedd ychwanegol yn cael ei israddio"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:80
+msgid "Updates will be skipped"
+msgstr "Bydd diweddariadau'n cael eu hepgor"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:88
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:168
+msgid "Additional changes are required"
+msgstr "Mae angen newidiadau ychwanegol"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:93
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:174
+#, python-format
+msgid "%s will be downloaded in total."
+msgstr "Bydd %s yn cael ei lwytho i lawr i gyd"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:97
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:178
+#, python-format
+msgid "%s of disk space will be freed."
+msgstr "Bydd %s o le ar ddisg yn cael ei ryddhau."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:101
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:182
+#, python-format
+msgid "%s more disk space will be used."
+msgstr "Bydd %s mwy o le ar ddisg yn cael ei ddefnyddio."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:106
+msgid "Flatpaks"
+msgstr "Flatpaks"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:251
+msgid "Flatpak"
+msgstr "Flatpak"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:324
+msgid "An error occurred"
+msgstr "Digwyddodd gwall"
+
+#~ msgid "Please enter your password"
+#~ msgstr "Rhowch eich cyfrinair"

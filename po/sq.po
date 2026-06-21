@@ -1,0 +1,153 @@
+# Albanian translation for linuxmint
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-11-26 10:25+0000\n"
+"PO-Revision-Date: 2025-09-14 11:58+0000\n"
+"Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
+"Language-Team: Albanian <sq@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2026-01-08 15:34+0000\n"
+"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
+
+#: usr/bin/cinnamon-remove-application:33 usr/bin/mint-remove-application:33
+msgid ""
+"This menu item is not associated to any package. Do you want to remove it "
+"from the menu anyway?"
+msgstr ""
+"Ky element menyje nuk është i lidhur me ndonjë paketë. Dëshironi ta hiqni "
+"nga menyja sidoqoftë?"
+
+#: usr/bin/cinnamon-remove-application:78 usr/bin/mint-remove-application:78
+msgid "The following packages will be removed:"
+msgstr "Paketat që vijojnë do të hiqen:"
+
+#: usr/bin/cinnamon-remove-application:85 usr/bin/mint-remove-application:85
+msgid "Packages to be removed"
+msgstr "Paketat që do të hiqen"
+
+#: usr/bin/cinnamon-remove-application:146 usr/bin/mint-remove-application:146
+#, python-format
+msgid "Cannot remove package %s as it is required by a system package."
+msgstr "Nuk mund të hiqet paketa %s pasi kërkohet nga një paketë sistemi."
+
+#: usr/bin/cinnamon-remove-application:152 usr/bin/mint-remove-application:152
+#, python-format
+msgid "Package %s is a dependency of the following packages:"
+msgstr "Paketa %s është një listë e paketave të internetit:"
+
+#: usr/bin/mint-remove-flatpak:59
+msgid "Removing"
+msgstr "Heqja"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:39
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:110
+msgid "Install"
+msgstr "Instalo"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:40
+msgid "Reinstall"
+msgstr "Riinstaloni"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:41
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:120
+msgid "Remove"
+msgstr "Hiq"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:42
+msgid "Purge"
+msgstr "Pastrim"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:43
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:140
+msgid "Upgrade"
+msgstr "Përmirëso"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:44
+msgid "Downgrade"
+msgstr "Ul nivelin"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:45
+msgid "Skip upgrade"
+msgstr "Anashkalo përmirësimin"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:61
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:145
+msgid "Please take a look at the list of changes below."
+msgstr "Ju lutemi hidhini një sy listës së ndryshimeve më poshtë."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:68
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:155
+msgid "Additional software will be installed"
+msgstr "Do të instalohet softuer shtesë"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:70
+msgid "Additional software will be re-installed"
+msgstr "Softuerët shtesë do të riinstalohen"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:72
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:157
+msgid "Additional software will be removed"
+msgstr "Softueri shtesë do të hiqet"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:74
+msgid "Additional software will be purged"
+msgstr "Softueri shtesë do të fshihet"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:76
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:159
+msgid "Additional software will be upgraded"
+msgstr "Softueri shtesë do të përditësohet"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:78
+msgid "Additional software will be downgraded"
+msgstr "Softuerët shtesë do të kalojnë në versionin e mëparshëm"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:80
+msgid "Updates will be skipped"
+msgstr "Përditësimet do të anashkalohen"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:88
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:168
+msgid "Additional changes are required"
+msgstr "Kërkohen ndryshime shtesë"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:93
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:174
+#, python-format
+msgid "%s will be downloaded in total."
+msgstr "%s do të shkarkohet në total."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:97
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:178
+#, python-format
+msgid "%s of disk space will be freed."
+msgstr "%s hapësirë ​​në disk do të lirohet."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:101
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:182
+#, python-format
+msgid "%s more disk space will be used."
+msgstr "Do të përdoret %s më shumë hapësirë ​​disku."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:106
+msgid "Flatpaks"
+msgstr "Paketat e sheshta"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:251
+msgid "Flatpak"
+msgstr "Flatpak"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:324
+msgid "An error occurred"
+msgstr "Ndodhi një gabim"
+
+#~ msgid "Please enter your password"
+#~ msgstr "Ju lutemi të vendosni fjalëkalimin tuaj"

@@ -1,0 +1,154 @@
+# Persian translation for linuxmint
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the linuxmint package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: linuxmint\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-11-26 10:25+0000\n"
+"PO-Revision-Date: 2025-04-13 19:58+0000\n"
+"Last-Translator: Hojjatollah_MaddahiKoupaie <goodlinuxuser@gmail.com>\n"
+"Language-Team: Persian <fa@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2026-01-08 15:34+0000\n"
+"X-Generator: Launchpad (build 99c00f518760bdd50fc6e353e7736d2fff8fba4a)\n"
+
+#: usr/bin/cinnamon-remove-application:33 usr/bin/mint-remove-application:33
+msgid ""
+"This menu item is not associated to any package. Do you want to remove it "
+"from the menu anyway?"
+msgstr ""
+"این موردِ فهرست به هیچ بسته‌ای مرتبط نیست.آیا میخواهید به هرحال از فهرست "
+"حذفش کنید؟"
+
+#: usr/bin/cinnamon-remove-application:78 usr/bin/mint-remove-application:78
+msgid "The following packages will be removed:"
+msgstr "بسته های زیر حذف خواهند شد:"
+
+#: usr/bin/cinnamon-remove-application:85 usr/bin/mint-remove-application:85
+msgid "Packages to be removed"
+msgstr "بسته‌هایی که باید حذف شوند"
+
+#: usr/bin/cinnamon-remove-application:146 usr/bin/mint-remove-application:146
+#, python-format
+msgid "Cannot remove package %s as it is required by a system package."
+msgstr ""
+"امکان حذف بسته %s نبود به خاطر این که مورد نیاز یک بسته سامانه ای بود."
+
+#: usr/bin/cinnamon-remove-application:152 usr/bin/mint-remove-application:152
+#, python-format
+msgid "Package %s is a dependency of the following packages:"
+msgstr "بسته %s یکی از نیازمندی های بسته های زیر است:"
+
+#: usr/bin/mint-remove-flatpak:59
+msgid "Removing"
+msgstr "درحال حذف"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:39
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:110
+msgid "Install"
+msgstr "نصب"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:40
+msgid "Reinstall"
+msgstr "نصب مجدد"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:41
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:120
+msgid "Remove"
+msgstr "حذف"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:42
+msgid "Purge"
+msgstr "حذف کامل"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:43
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:140
+msgid "Upgrade"
+msgstr "ارتقا"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:44
+msgid "Downgrade"
+msgstr "تنزل دادن"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:45
+msgid "Skip upgrade"
+msgstr "رد کردن ارتقا"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:61
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:145
+msgid "Please take a look at the list of changes below."
+msgstr "لطفا به لیست تغییرات زیر نگاهی بیندازید."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:68
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:155
+msgid "Additional software will be installed"
+msgstr "نرم افزار اضافی نصب خواهد شد"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:70
+msgid "Additional software will be re-installed"
+msgstr "نرم افزار اضافی نصب مجدد خواهد شد"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:72
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:157
+msgid "Additional software will be removed"
+msgstr "نرم افزار اضافی حذف خواهد شد"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:74
+msgid "Additional software will be purged"
+msgstr "نرم‌افزار اضافی حذف‌کامل خواهد شد"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:76
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:159
+msgid "Additional software will be upgraded"
+msgstr "نرم افزار اضافی ارتقا خواهد یافت"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:78
+msgid "Additional software will be downgraded"
+msgstr "نرم‌افزار اضافی تنزل داده خواهد شد"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:80
+msgid "Updates will be skipped"
+msgstr "از بروزرسانی ها صرف نظر خواهد شد"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:88
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:168
+msgid "Additional changes are required"
+msgstr "تغییرات اضافی مورد نیاز است"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:93
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:174
+#, python-format
+msgid "%s will be downloaded in total."
+msgstr "در کل %s بارگیری خواهد شد."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:97
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:178
+#, python-format
+msgid "%s of disk space will be freed."
+msgstr "%s از فضای دیسک آزاد خواهد شد."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:101
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:182
+#, python-format
+msgid "%s more disk space will be used."
+msgstr "%s دیگر از فضای دیسک استفاده خواهد شد."
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:106
+msgid "Flatpaks"
+msgstr "Flatpak ها"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:251
+msgid "Flatpak"
+msgstr "Flatpak ها"
+
+#: usr/lib/python3/dist-packages/mintcommon/installer/dialogs.py:324
+msgid "An error occurred"
+msgstr "خطایی رخ داد"
+
+#~ msgid "Please enter your password"
+#~ msgstr "لطفاً رمز عبور خود را وارد کنید"
