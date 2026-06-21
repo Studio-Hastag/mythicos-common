@@ -10,17 +10,16 @@ import gettext
 import subprocess
 
 from pathlib import Path
-from mintcommon.installer import installer
-from mintcommon.installer import dialogs
-from mintcommon.installer.misc import check_ml
+from mythiccommon.installer import installer
+from mythiccommon.installer import dialogs
+from mythiccommon.installer.misc import check_ml
 
 # i18n
-gettext.install("mintinstall", "/usr/share/linuxmint/locale")
+gettext.install("mythicstore", "/usr/share/mythicos/locale")
 
 class AppUninstaller:
     def __init__(self, desktopFile):
         self.desktopFile = desktopFile
-
         self.error = None
         self.installer = installer.Installer().init(self.on_installer_ready)
         self.progress_window = None
@@ -29,7 +28,6 @@ class AppUninstaller:
 
     def on_installer_ready(self):
         pkg_name = self.get_fp_name()
-
         if pkg_name is None:
             print("Package for '%s' not found" % self.desktopFile)
             self.on_finished(None, 1)
@@ -46,6 +44,7 @@ class AppUninstaller:
 
     def on_installer_info_ready(self, task):
         self.task = task
+
         if self.installer.confirm_task(task):
             self.installer.execute_task(task)
         else:
@@ -64,10 +63,13 @@ class AppUninstaller:
 
             self.pkg_name = Gtk.Label(max_width_chars=45, wrap=True)
             box.pack_start(self.pkg_name, True, False, 6)
+
             spinner = Gtk.Spinner(active=True)
             spinner.set_size_request(36, 36)
             box.pack_start(spinner, True, False, 0)
+
             box.show_all()
+
             self.pkg_name.set_label(pkginfo.get_display_name())
 
             self.progress_window.run()
@@ -101,13 +103,11 @@ class AppUninstaller:
         return False
 
 if __name__ == "__main__":
-
     # Exit if the given path does not exist
     if len(sys.argv) < 2 or not os.path.exists(sys.argv[1]) or not sys.argv[1].endswith(".desktop"):
-        print("mint-remove-flatpak: Single argument required, the full path of a desktop file.")
+        print("mythicos-remove-flatpak: Single argument required, the full path of a desktop file.")
         sys.exit(1)
 
     mainwin = AppUninstaller(sys.argv[1])
     Gtk.main()
-
     exit(1 if mainwin.error else 0)
