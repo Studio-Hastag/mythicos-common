@@ -19,7 +19,7 @@ from . import dialogs
 
 # List extra packages that aren't necessarily marked in their control files, but
 # we know better...
-CRITICAL_PACKAGES = ["mint-common", "mint-translations", "mint-meta-core", "mintdesktop", "python3", "perl"]
+CRITICAL_PACKAGES = ["mythicos-common", "mythicos-core-verrou", "mythicos-desktop", "mythicos-system", "python3", "perl"]
 
 def capitalize(string):
     if len(string) > 1:
@@ -93,7 +93,7 @@ def process_full_apt_cache(cache):
             continue
         if name == "snapd":
             continue
-        if name == "pepperflashplugin-nonfree": # formerly marked broken, it's now a dummy and has no dependents (and only exists in Mint 20).
+        if name == "pepperflashplugin-nonfree": # formerly marked broken, it's now a dummy and has no dependents.
             continue
         if pkg.candidate is None:
             continue

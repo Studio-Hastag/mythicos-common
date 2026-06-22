@@ -13,8 +13,8 @@ from .pkgInfo import FlatpakPkgInfo, AptPkgInfo
 from .misc import print_timing, debug, warn
 from typing import Optional
 
-SYS_CACHE_PATH = "/var/cache/mintinstall/pkginfo.json"
-USER_CACHE_PATH = os.path.join(GLib.get_user_cache_dir(), "mintinstall", "pkginfo.json")
+SYS_CACHE_PATH = "/var/cache/mythicstore/pkginfo.json"
+USER_CACHE_PATH = os.path.join(GLib.get_user_cache_dir(), "mythicstore", "pkginfo.json")
 
 MAX_AGE = 7 * (60 * 60 * 24) # days
 
@@ -251,8 +251,8 @@ class PkgCache(object):
         cache, sections, flatpak_remote_infos = self._generate_cache()
 
         # If we're refreshing only a specific package type, don't destroy existing
-        # items of the other type (otherwise if the cache is refreshed by mintupdate's
-        # flatpak updater mintinstall will end up starting without any apt package info
+        # items of the other type (otherwise if the cache is refreshed by mythicos-update's
+        # flatpak updater mythicstore will end up starting without any apt package info
         # and look broken).
         with self._item_lock:
             if self.cache_content == "f":

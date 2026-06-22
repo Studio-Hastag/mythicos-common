@@ -7,6 +7,10 @@ Standards-Version: 3.9.5
 
 Package: mythicos-common
 Architecture: all
+Breaks: mint-common
+Provides: mint-common (= 2.4.9)
+Replaces: mint-common
+Conflicts: mint-common
 Depends: python3,
          aptkit,
          python3-gi,

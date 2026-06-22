@@ -238,7 +238,7 @@ class Package():
 
     def get_developer(self):
         # "developer" is recent, replacing "developer_name". Currently both are allowed, though older
-        # libappstream doesn't support it, causing us to only see the developer name in mintinstall if they're
+        # libappstream doesn't support it, causing us to only see the developer name in mythicstore if they're
         # still using "developer_name". If all else fails, project_group may have something.
         dev_name = None
 

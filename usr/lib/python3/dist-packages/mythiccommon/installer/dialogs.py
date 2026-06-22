@@ -3,8 +3,8 @@ gi.require_version('XApp', '1.0')
 from gi.repository import GLib, Gtk, GObject, Gdk, XApp, Pango
 
 import gettext
-APP = 'mint-common'
-LOCALE_DIR = "/usr/share/linuxmint/locale"
+APP = 'mythicos-common'
+LOCALE_DIR = "/usr/share/mythicos/locale"
 t = gettext.translation(APP, LOCALE_DIR, fallback=True)
 _ = t.gettext
 
@@ -126,7 +126,7 @@ class ChangesConfirmDialog(AptConfirmDialog):
                     self.treestore.append(piter, [ref.get_name()])
 
             if len(self.task.to_update) > 0:
-                # If this is an update task (like from mintupdate) we may have selected updates explicitly, and there may be
+                # If this is an update task (like from mythicos-update) we may have selected updates explicitly, and there may be
                 # updates we *didn't* select but are required for an update we did. We only want to add those updates that
                 # are pulled in the second case, since the updates we did select do not need to be displayed again (this is
                 # following apt behavior, where we only list dependencies here and unexpected changes).
@@ -203,7 +203,7 @@ class ChangesConfirmDialog(AptConfirmDialog):
 class FlatpakProgressWindow(Gtk.Dialog):
     """
     Progress dialog for standalone flatpak installs, removals, updates.
-    Intended to be used when not working as part of a parent app (like mintinstall)
+    Intended to be used when not working as part of a parent app (like mythicstore)
     """
 
     def __init__(self, task, parent=None):

@@ -4,7 +4,7 @@ apt_changelog.py
 
 Replacement for apt changelog, can be used both standalone and as a module.
 
-In addition to apt changelog sources, it directly supports also Linux Mint
+In addition to apt changelog sources, it directly supports also MythicOS
 and Launchpad repositories and will try to retrieve a changelog for packages
 from all other debian package sources as well. Most importantly, changelogs
 for installed packages are retrieved locally to avoid unnecessary network
@@ -139,8 +139,8 @@ Proceed with the download?"
         # parse the package's origin
         if not self.candidate.downloadable:
             origin = "local_package"
-        elif self.candidate.origin == "linuxmint":
-            origin = "linuxmint"
+        elif self.candidate.origin == "MythicOS":
+            origin = "MythicOS"
         elif self.candidate.origin.startswith("LP-PPA-"):
             origin = "LP-PPA"
         elif self.apt_origins and self.candidate.origin in self.apt_origins.list():
@@ -174,26 +174,14 @@ Proceed with the download?"
             r = self.check_url(uri)
             if not r:
                 self.exit_on_fail(2)
-        # Linux Mint repo
-        elif origin == 'linuxmint':
-            # Mint repos don't have .debian.tar.xz files, only full packages, so
+        # MythicOS repo
+        elif origin == 'MythicOS':
+            # MythicOS repo doesn't have .debian.tar.xz files, only full packages, so
             # check the package cache first
             base_uri, _ = os.path.split(self.candidate.uri)
             r, uri = self.get_changelog_uri(base_uri)
             if not r:
-                # fall back to last change info for the source package
-                # Mint's naming scheme seems to be using amd64 unless source
-                # is i386 only, we always check amd64 first
-                base_uri = "http://packages.linuxmint.com/dev/%s_%s_%s.changes"
-                uri = base_uri % (self.candidate.source_name,
-                    self.candidate.source_version, "amd64")
-                r = self.check_url(uri, False)
-                if not r:
-                    uri = base_uri % (self.candidate.source_name,
-                        self.candidate.source_version, "i386")
-                    r = self.check_url(uri, False)
-                    if not r:
-                        self.exit_on_fail(3)
+                self.exit_on_fail(3)
 
         # Launchpad PPA
         elif origin == 'LP-PPA':

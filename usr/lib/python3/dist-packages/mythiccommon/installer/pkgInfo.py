@@ -209,7 +209,7 @@ class AptPkgInfo(PkgInfo):
         return None
 
     def get_screenshots(self, apt_pkg=None):
-        return [] # handled in mintinstall for now
+        return [] # handled in mythicstore for now
 
     def get_version(self, apt_pkg=None):
         if self.version:

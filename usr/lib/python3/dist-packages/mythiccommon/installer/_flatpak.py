@@ -544,7 +544,7 @@ class FlatpakTransaction():
                         for ref in self.task.initial_refs_to_update:
                             # Sometimes it turns out we have a new package to install that is not part of
                             # another package's pulled-in dependencies. It ends up as a selectable update in
-                            # mintupdate. Once it does, though, we have to find its associated package in
+                            # mythicos-update. Once it does, though, we have to find its associated package in
                             # the original update list so we know which remote to try and pull it from.
                             #
                             # FIXME: this is because select_updates only takes a ref string. It could take a a remote
@@ -1083,7 +1083,7 @@ def _pkginfo_from_file_thread(cache, file, callback):
                     rpool = appstream_pool.Pool(remote)
                     _process_remote(cache, rpool, fp_sys, remote, Flatpak.get_default_arch())
 
-                # Add the ref to the cache, so we can work with it like any other in mintinstall
+                # Add the ref to the cache, so we can work with it like any other in mythicstore
                 pkginfo = _add_package_to_cache(cache, rpool, ref, remote.get_url(), False)
 
                 # Some flatpakref files will have a pointer to a runtime .flatpakrepo file

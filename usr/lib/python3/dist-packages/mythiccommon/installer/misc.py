@@ -33,7 +33,7 @@ def print_timing(func):
             t1 = time.time()
             res = func(*arg)
             t2 = time.time()
-            print('mint-common (DEBUG): %s took %0.3f ms' % (func.__qualname__, (t2 - t1) * 1000.0), flush=True, file=sys.stderr)
+            print('mythicos-common (DEBUG): %s took %0.3f ms' % (func.__qualname__, (t2 - t1) * 1000.0), flush=True, file=sys.stderr)
             return res
         return wrapper
 
@@ -54,19 +54,19 @@ def debug(*args):
         return
     sanitized = [str(arg) for arg in args if arg is not None]
     argstr = " ".join(sanitized)
-    print("mint-common (DEBUG): %s" % argstr, file=sys.stderr, flush=True)
+    print("mythicos-common (DEBUG): %s" % argstr, file=sys.stderr, flush=True)
 
 def debug_query(*args):
     if not DEBUG_QUERIES:
         return
     sanitized = [str(arg) for arg in args if arg is not None]
     argstr = " ".join(sanitized)
-    print("mint-common (DEBUG): %s" % argstr, file=sys.stderr, flush=True)
+    print("mythicos-common (DEBUG): %s" % argstr, file=sys.stderr, flush=True)
 
 def warn(*args):
     sanitized = [str(arg) for arg in args if arg is not None]
     argstr = " ".join(sanitized)
-    print("mint-common (WARN): %s" % argstr, file=sys.stderr, flush=True)
+    print("mythicos-common (WARN): %s" % argstr, file=sys.stderr, flush=True)
 
 def xml_markup_convert_to_text(markup):
     if markup is None:
