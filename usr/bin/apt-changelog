@@ -1,1 +1,2 @@
-/usr/lib/python3/dist-packages/mythiccommon/apt_changelog.py
+#!/bin/bash
+exec /usr/lib/python3/dist-packages/mythiccommon/apt_changelog.py "$@"

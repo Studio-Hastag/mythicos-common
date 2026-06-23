@@ -1,1 +1,2 @@
-mythicos-remove-application
+#!/bin/bash
+exec mythicos-remove-application "$@"
